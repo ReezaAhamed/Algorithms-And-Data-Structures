@@ -4,8 +4,8 @@ public class BinarySearch {
 	 
 	public static void main(String[] args) {
 		
-		int[] array = {-18, -12, -4, 0, 2, 3, 4, 15, 16, 18, 22, 45, 89};
-		int target = 22;
+		int[] array = {-15, -12, -3, 0, 1, 3, 7, 15, 17, 21, 35, 55, 99};
+		int target = 21;
 		int answer = binarySearch(array, target);
 		System.out.println(answer);
 	}
