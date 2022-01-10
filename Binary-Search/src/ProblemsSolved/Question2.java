@@ -46,6 +46,10 @@ public class Question2 {
 				}				
 			}			
 		}
+		
+		if(!isAscending) { // if it's in descending order, return start
+			return start;
+		}
 		return end;
 	}
 
