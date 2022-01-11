@@ -24,7 +24,7 @@ public class Question1 {
 		
 		boolean isAscending = array[end] > array[0];
 		
-		// check whether target is greater then the max value of array
+		// check whether target is greater than the max value of array
 		if(isAscending) {
 			if(target > array[end])
 				return -1;
