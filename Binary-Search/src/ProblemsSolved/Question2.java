@@ -24,6 +24,15 @@ public class Question2 {
 		
 		boolean isAscending = array[end] > array[0];
 		
+		// check whether target is greater then the max value of array
+		if(isAscending) {
+			if(target < array[0])
+				return -1;
+		} else {
+			if(target < array[end])
+				return -1;
+		}		
+		
 		while(start <= end) {
 			 
 			int mid = start + (end - start) / 2;
