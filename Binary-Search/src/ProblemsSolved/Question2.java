@@ -4,7 +4,7 @@ public class Question2 {
 	
 	/* The Question 
 	 * Floor of a number
-	 * i.e. Find the smallest element in array which is less than or equal to the target number
+	 * i.e. Find the biggest element in array which is less than or equal to the target number
 	*/
 
 	public static void main(String[] args) {
