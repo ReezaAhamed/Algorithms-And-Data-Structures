@@ -12,7 +12,7 @@ public class Question3 {
 	public static void main(String[] args) {
 		
 		char [] letters = {'a', 'b', 'm','x','y'};
-		char target = 'a';
+		char target = 'y';
 		
 		System.out.println(nextGreatestLetter(letters, target));
 	}
@@ -22,24 +22,18 @@ public class Question3 {
 		int start = 0;
 		int end = letters.length - 1;
 		
-		if(target >= letters[end]) {
-			return letters[start];
-		}
-		
-		while (start <= end) {
+		while (start <= end) { // loop breaks when start = end+1
 			
 			int mid = start + (end-start)/2;
 			
-			if(target > letters[mid]) {
-				start = mid + 1;
-			} else if (target < letters[mid]) {
+			if(target < letters[mid]) {
 				end = mid - 1;
-			} else {
-				return letters[mid+1];
+			} else {         // equals condition need not to bes tested as the question is asking the greater value
+				start = mid + 1;
 			}
 		}
 			
-		return letters[start];
+		return letters[start % (letters.length)];
 		
 	}
 
