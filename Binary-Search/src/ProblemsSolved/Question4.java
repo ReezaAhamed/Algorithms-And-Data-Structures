@@ -16,7 +16,7 @@ public class Question4 {
 	
 	public static void main(String[] args) {
 		
-		int[] nums = {5,7,7,8,8,10}; 
+		int[] nums = {5,7,7,8,8,10}; // int[] nums = {5,7,7,8,8,8,8,8,9,10}; 
 		int target = 8;
 		
 		System.out.println(Arrays.toString(searchRange(nums, target)));
@@ -27,8 +27,8 @@ public class Question4 {
 		
 		int[] position = {-1, -1}; // initiate as if nothing found
 		
-		int start = searchOneSide(nums, target, true);
-		int end = searchOneSide(nums, target, false);
+		int start = searchOneSide(nums, target, true); // searchinf for first occurance
+		int end = searchOneSide(nums, target, false);  // searching for last occurance
 
 		position[0] = start;
 		position[1] = end;
