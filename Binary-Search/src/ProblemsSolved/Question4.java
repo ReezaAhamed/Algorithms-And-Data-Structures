@@ -40,7 +40,7 @@ public class Question4 {
 	public static int searchOneSide(int[] arr, int target, boolean findStartIndex) {
 		
 		// potential candidate
-		int position = -1; 
+		int position = -1; // initiate as if nothing found
 		
 		int start = 0;
 		int end = arr.length -1;
