@@ -3,7 +3,7 @@ package ProblemsSolved;
 public class Question5 {
 	
 	/*
-	 * Amazon : Find position of an element in a sorted array of infinite numbers
+	 * Amazon : Find position of an element in a sorted array of 'infinite' numbers
 	 */
 	
 	public static void main(String[] args) {
@@ -17,14 +17,22 @@ public class Question5 {
 	
 	public static int findPositionInInfiniteArray(int[] array, int target){
 		
+		// Find the range
+		// start the box with size 2
 		int start = 0;
 		int end = 1;
 		
-		while(array[end] < target) {
+		while(array[end] < target) { // condition for the target to ;ie in the range we are looking for
 			
-			start = end;
-			end = 2 * end;
+			int newStart = end + 1; // new start, because, in the next step we need start variable to calculate the box size
+			// end = 2 * end; // in order to acheive log N time complexity, best approach is to double. (Chunk : Bottom to top 2 to N, remember BS, top to bottom)
+			// double the box size i.e. end = previous end * box size*2
+			end = end + (end - start + 1)*2; // +1, beacuse, size of the box is always difference of indices + 1
+			
+			start = newStart;
 		}
+		
+		// Now we have the range whetre our target lies in, Apply binary search
 		
 		while(start <= end) {
 			int mid = start + (end-start)/2;
