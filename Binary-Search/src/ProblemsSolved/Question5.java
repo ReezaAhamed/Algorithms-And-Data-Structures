@@ -22,7 +22,7 @@ public class Question5 {
 		int start = 0;
 		int end = 1;
 		
-		while(array[end] < target) { // condition for the target to ;ie in the range we are looking for
+		while(array[end] < target) { // condition for the target to lie in the range we are looking for
 			
 			int newStart = end + 1; // new start, because, in the next step we need start variable to calculate the box size
 			// end = 2 * end; // in order to acheive log N time complexity, best approach is to double. (Chunk : Bottom to top 2 to N, remember BS, top to bottom)
