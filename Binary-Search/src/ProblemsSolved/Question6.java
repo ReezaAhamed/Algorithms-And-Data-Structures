@@ -65,10 +65,10 @@ public class Question6 {
 			 
 			int mid = start + (end-start)/2;
 			
-			if(array[mid] > array[mid+1]) { // we are in decreasing part of the error. It may be the answer, but look at left
+			if(array[mid] > array[mid+1]) { // we are in decreasing part of the array. It may be the answer, but look at left
 				end = mid;    // end != mid-1, cuz this (mid) may be an answer
 			} else { // we are in ascending part of the array.
-				start = mid+1 ; // mid+1, cuz, we know that mid+1 element b> mid element
+				start = mid+1 ; // mid+1, cuz, we know that mid+1 element > mid element
 			}
 
 		 }
